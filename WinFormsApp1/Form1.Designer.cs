@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            textBox3 = new TextBox();
             textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
             groupBox2 = new GroupBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -54,29 +54,22 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "taskform";
             // 
-            // textBox1
+            // textBox4
             // 
-            textBox1.Location = new Point(94, 22);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(406, 23);
-            textBox1.TabIndex = 0;
+            textBox4.Location = new Point(345, 80);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(74, 23);
+            textBox4.TabIndex = 5;
+            textBox4.Text = "Clear";
             // 
-            // textBox2
+            // textBox3
             // 
-            textBox2.Location = new Point(94, 51);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "2025-01-16";
-            textBox2.Size = new Size(406, 23);
-            textBox2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 22);
-            label1.Name = "label1";
-            label1.Size = new Size(29, 15);
-            label1.TabIndex = 2;
-            label1.Text = "Task";
+            textBox3.Location = new Point(425, 80);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(75, 23);
+            textBox3.TabIndex = 4;
+            textBox3.Text = "Add Todo";
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label2
             // 
@@ -87,21 +80,29 @@
             label2.TabIndex = 3;
             label2.Text = "Due Date";
             // 
-            // textBox3
+            // label1
             // 
-            textBox3.Location = new Point(425, 80);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(75, 23);
-            textBox3.TabIndex = 4;
-            textBox3.Text = "Add Todo";
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(29, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Task";
             // 
-            // textBox4
+            // textBox2
             // 
-            textBox4.Location = new Point(345, 80);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(74, 23);
-            textBox4.TabIndex = 5;
-            textBox4.Text = "Clear";
+            textBox2.Location = new Point(94, 51);
+            textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = "2025-01-16";
+            textBox2.Size = new Size(406, 23);
+            textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(94, 22);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(406, 23);
+            textBox1.TabIndex = 0;
             // 
             // groupBox2
             // 
