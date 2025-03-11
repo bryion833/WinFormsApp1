@@ -7,21 +7,41 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp1
 {
-    public class ToDo() 
-    internal class to_do
+    internal class ToDo : IComparable<ToDo>
     {
-        public static int ID = 0;
-        public int MyProperty { get; set; }
+        public int ID { get; set; } = 0;
         public string TaskDescription { get; set; }
         public DateTime DueDate { get; set; }
-        public bool Isdone { get; set; }
+        public bool IsDone { get; set; }
 
-        public ToDo(string description, DateTime Date, bool doneState)
+        public int CompareTo(ToDo? other)
+        {
+            if (DueDate < other.DueDate) return -1;
+            else if (DueDate == other.DueDate) return 0;
+            else return 1;
+        }
+
+        public override string ToString()
+        {
+            if (IsDone) {
+                return "[X] " + ID.ToString() + " - " + DueDate.ToString("dddd, dd MMMM yyyy") + " - " + TaskDescription;
+            }
+            else
+            {
+                return ID.ToString() + " - " + DueDate.ToString("dddd, dd MMMM yyyy") + " - " + TaskDescription;
+            }
+        }
+
+
+        //public ToDo(string description, DateTime Date, bool doneState)
+        //{
+
+        //}
     }
-    objectCounter++
-        ID= ObjectCounter;
-        TaskDescription = DescriptionAttribute;
-        DueDate = DateTime;
-        isdone = doneState;
+    //objectCounter++
+    //    ID= ObjectCounter;
+    //    TaskDescription = DescriptionAttribute;
+    //    DueDate = DateTime;
+    //    isdone = doneState;
 
 }

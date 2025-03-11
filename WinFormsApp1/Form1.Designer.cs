@@ -29,101 +29,125 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
+            button2 = new Button();
+            button1 = new Button();
             label2 = new Label();
             label1 = new Label();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            DueDateBox = new TextBox();
+            TaskBox = new TextBox();
             groupBox2 = new GroupBox();
+            TaskListBox = new ListBox();
             groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Location = new Point(12, 12);
+            groupBox1.Controls.Add(DueDateBox);
+            groupBox1.Controls.Add(TaskBox);
+            groupBox1.Location = new Point(14, 16);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(506, 119);
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(578, 159);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "taskform";
             // 
-            // textBox4
+            // button2
             // 
-            textBox4.Location = new Point(345, 80);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(74, 23);
-            textBox4.TabIndex = 5;
-            textBox4.Text = "Clear";
+            button2.Location = new Point(376, 102);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 5;
+            button2.Text = "clear";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += ClearTodo;
             // 
-            // textBox3
+            // button1
             // 
-            textBox3.Location = new Point(425, 80);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(75, 23);
-            textBox3.TabIndex = 4;
-            textBox3.Text = "Add Todo";
-            textBox3.TextChanged += textBox3_TextChanged;
+            button1.Location = new Point(476, 102);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 4;
+            button1.Text = "Add Task";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += AddTodo;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(6, 51);
+            label2.Location = new Point(7, 68);
             label2.Name = "label2";
-            label2.Size = new Size(55, 15);
+            label2.Size = new Size(72, 20);
             label2.TabIndex = 3;
             label2.Text = "Due Date";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(6, 22);
+            label1.Location = new Point(7, 29);
             label1.Name = "label1";
-            label1.Size = new Size(29, 15);
+            label1.Size = new Size(36, 20);
             label1.TabIndex = 2;
             label1.Text = "Task";
             // 
-            // textBox2
+            // DueDateBox
             // 
-            textBox2.Location = new Point(94, 51);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "2025-01-16";
-            textBox2.Size = new Size(406, 23);
-            textBox2.TabIndex = 1;
+            DueDateBox.Location = new Point(107, 68);
+            DueDateBox.Margin = new Padding(3, 4, 3, 4);
+            DueDateBox.Name = "DueDateBox";
+            DueDateBox.PlaceholderText = "2025-01-16";
+            DueDateBox.Size = new Size(463, 27);
+            DueDateBox.TabIndex = 1;
             // 
-            // textBox1
+            // TaskBox
             // 
-            textBox1.Location = new Point(94, 22);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(406, 23);
-            textBox1.TabIndex = 0;
+            TaskBox.Location = new Point(107, 29);
+            TaskBox.Margin = new Padding(3, 4, 3, 4);
+            TaskBox.Name = "TaskBox";
+            TaskBox.Size = new Size(463, 27);
+            TaskBox.TabIndex = 0;
             // 
             // groupBox2
             // 
-            groupBox2.Location = new Point(12, 137);
+            groupBox2.Controls.Add(TaskListBox);
+            groupBox2.Location = new Point(14, 183);
+            groupBox2.Margin = new Padding(3, 4, 3, 4);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(506, 671);
+            groupBox2.Padding = new Padding(3, 4, 3, 4);
+            groupBox2.Size = new Size(578, 424);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Task List";
+            groupBox2.Text = "Task to do List";
+            // 
+            // TaskListBox
+            // 
+            TaskListBox.FormattingEnabled = true;
+            TaskListBox.Location = new Point(17, 30);
+            TaskListBox.Name = "TaskListBox";
+            TaskListBox.Size = new Size(555, 384);
+            TaskListBox.Sorted = true;
+            TaskListBox.TabIndex = 1;
+            TaskListBox.SelectedIndexChanged += IndexSelected;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(530, 820);
+            ClientSize = new Size(606, 620);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -132,10 +156,11 @@
         private GroupBox groupBox1;
         private Label label2;
         private Label label1;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private TextBox textBox4;
-        private TextBox textBox3;
+        private TextBox DueDateBox;
+        private TextBox TaskBox;
         private GroupBox groupBox2;
+        private ListBox TaskListBox;
+        private Button button2;
+        private Button button1;
     }
 }
